@@ -1,0 +1,331 @@
+/* ---------------------------------------------------
+                General Style
+----------------------------------------------------- */
+body {
+    overflow: hidden;
+}
+
+.cloudBtn {
+    padding: 10px 20px;
+    margin:0;
+    color: black;
+    border: solid 2px black;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.accBtn {
+    color: white;
+    border-color:white;
+    padding: 10px 20px;
+    margin: 0;
+}
+.cloudBtn a {
+    color: black;
+    text-decoration: none;
+}
+
+ .cloudBtn:hover {
+    border-color: #FF6B81;
+}
+.subtext {
+    color: #7F7B82;
+}
+
+
+.cloudBtnInPopup {
+    padding: 10px 20px;
+    margin-right: 5%;
+    border: none;
+    background-color:#74B9FF;
+    cursor:pointer;
+    border-radius:2px;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.profilePictureStyle {
+    height: 100px;
+    width: 100px;
+}
+
+ #smallerSidebarIcon {
+    display: none;
+}
+.bottomSidebarSec {
+    position: absolute;
+    bottom:0;
+    padding-left: 5%;
+    padding-bottom: 0;
+    margin-bottom:0;
+    color: white;
+    cursor: pointer;
+}
+
+/* --------- */
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #74B9FF;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.sidebar-header img {
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+}
+
+
+/* Sidebar active */
+
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+#sidebar.active .bottomSidebarSec {
+    display: none;
+}
+
+#sidebar.active .loginLinks p,
+#sidebar.active .loginLinks .cloudBtn {
+    display: none;
+}
+
+#sidebar.active .sidebar-header img {
+    width: 70%;
+    height: 70%;
+}
+#sidebar.actve .profilePictureStyle { 
+    height: 50px;
+    width: 50px;
+}
+
+#sidebar.active .uploadSec {
+    display: none;
+}
+
+#sidebar.active #userEmailDetails {
+    display: none;
+}
+
+#sidebar.active .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+/* ---------------------------------------------------
+    UPLOAD SECTION STYLE --- INCLUDES others.
+----------------------------------------------------- */
+.uploadSec {
+    cursor: pointer;
+}
+progress {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------
+    CONNECT ACCOUNT STYLE -- 
+----------------------------------------------------- */
+.accountTitle {
+    font-size: 150%;
+}
+
+
+/* ---------------------------------------------------
+    TOOLBAR STYLE
+----------------------------------------------------- */
+.toolSection{
+    width:100%;
+    height:50px;
+    background-color: #E2E2E2;
+    border: rgba(112, 112, 112, 0.096) 2px solid;
+    border-radius: 10px;
+}
+
+.toolBarBtn {
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-family: 'circular';
+    padding: 0 2%;
+    cursor: pointer;
+}
+.toolSecCloseBtn{
+    height:100%;    
+}
+.toolBarBtn:hover {
+    border-bottom: solid 2.5px #74B9FF;
+    color: #74B9FF;
+}
+.toolSection.remove {
+    display: none;
+}
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+.actionBtn{
+    border-right: solid 0.5px rgba(145, 145, 145, 0.473);
+    padding: 0 3px;
+    font-size: 110%;
+    height:100% !important;
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+    margin: 2px;
+    font-family: 'circular';
+    display:none;
+}
+.actionBtn:hover {
+    color: rgb(48, 47, 47);
+}
+.whiteFileSec:hover .actionBtn, .greyFileSec:hover .actionBtn{
+        display:block;
+}
+
+.header {
+    font-size: 2em;
+    opacity: 0.2;
+    color: #2D2D35;
+    display:none;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.fileSection {
+    border: rgba(112, 112, 112, 0.096) 2px solid;
+    border-radius: 10px;
+    background-color: #E2E2E2;
+    height: 86%;
+    width: 100%;
+    padding:0;
+    color: #2D2D35; 
+    overflow: auto !important;
+}
+
+.fileTitle {
+    font-size: 200%;
+}
+.fileTitle a{
+    color: #7F7B82;
+}
+
+.iconImg {
+    padding-right: 2%;
+}
+.greyFileSec, .whiteFileSec {
+    padding: 5px 2px;
+}
+.greyFileSec {
+    background-color: #CDCDCD;
+    color: black;
+    width: 100%;
+}
+.whiteFileSec {
+    background-color:rgba(255, 255, 255, 0.247);
+    color: black;
+    width:100%;
+}
+.greyFileSec:hover, .whiteFileSec:hover {
+    background-color: lightblue;
+    cursor: pointer;
+
+}
+::-webkit-scrollbar-track  {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    width: 5px;
+}
+
+/* ---------------------------------------------------
+    Transfer Modal Popup
+----------------------------------------------------- */
+
+.logOutBeforeTransfer {
+          display: none;
+}
+
+/* ---------------------------------------------------
+    FOOTER
+----------------------------------------------------- */
+.page-footer {
+    display: none;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* --------------  SIDEBAR STYLE ----------- */ 
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: 0px !important;
+    }
+
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    #sidebar.active {
+        margin-left: 20 !important;
+    }
+    /* ------ Sidebar buttons --- */
+    .cloudBtn.accBtn .regularBtn {
+        display: none;
+    }
+     #smallerSidebarIcon {
+        display: block;
+    }
+    .regularBtn {
+        display: none;
+    }
+    .userDetailsSection p {
+        display:none;
+    }
+
+    .cloudBtn.accBtn {
+        border:none;
+        border-radius: 0;
+    }
+    .cloudBtn.accBtn:hover {
+        border-bottom: solid 1px #FF6B81;
+    }
+
+     /* --------------  TOOLBAR STYLE ----------- */ 
+    .toolBarBtn {
+        font-size: 80%;
+    }
+
+}
